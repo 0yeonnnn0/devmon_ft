@@ -5,7 +5,7 @@ import MonacoEditor from "@monaco-editor/react";
 import { Helmet } from "react-helmet";
 
 const App = () => {
-  const [url, setUrl] = useState("https://www.acmicpc.net/problem/2056");
+  const [url, setUrl] = useState("");
   const [tagName, setTagName] = useState("");
   const [related_problems, setRelatedProblems] = useState([]);
   const [explanation, setExplanation] = useState("");
@@ -186,7 +186,7 @@ const App = () => {
         {!loading && explanation && (
           <div className="space-y-8 bg-white p-6 rounded-xl shadow-sm border border-[hsl(20,30%,90%)]">
             <section>
-              <h2 className="text-xl font-semibold text-[hsl(20,25%,25%)] mb-4">
+              <h2 className="text-2xl font-semibold text-[hsl(20,25%,25%)] mb-4">
                 권장되는 알고리즘
               </h2>
               <div className="prose max-w-none text-[hsl(20,20%,30%)]">
@@ -195,10 +195,10 @@ const App = () => {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-[hsl(20,25%,25%)] mb-4">
+              <h2 className="text-2xl font-semibold text-[hsl(20,25%,25%)] mb-4">
                 주요 개념
               </h2>
-              <div className="prose max-w-none text-[hsl(20,20%,30%)]">
+              <div className="prose max-w-none text-[hsl(20,20%,30%)] [&>p]:leading-loose [&>p]:mb-1">
                 <ReactMarkdown>
                   {formatExplanation(explanation.key_concepts)}
                 </ReactMarkdown>
@@ -206,10 +206,10 @@ const App = () => {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-[hsl(20,25%,25%)] mb-4">
+              <h2 className="text-2xl font-semibold text-[hsl(20,25%,25%)] mb-4">
                 풀이 접근 방법
               </h2>
-              <div className="prose max-w-none text-[hsl(20,20%,30%)]">
+              <div className="prose max-w-none text-[hsl(20,20%,30%)] [&>p]:leading-loose [&>p]:mb-1">
                 <ReactMarkdown>
                   {formatExplanation(explanation.solution_approach)}
                 </ReactMarkdown>
@@ -218,8 +218,8 @@ const App = () => {
 
             <section>
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-semibold text-[hsl(20,25%,25%)]">
-                  {showCode ? "코드(Python)" : "수도 코드"}
+                <h2 className="text-2xl font-semibold text-[hsl(20,25%,25%)]">
+                  {showCode ? "Code(Python)" : "Pseudo Code"}
                 </h2>
                 <button
                   onClick={() => setShowCode(!showCode)}
@@ -284,7 +284,7 @@ const App = () => {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-[hsl(20,25%,25%)] mb-4">
+              <h2 className="text-2xl font-semibold text-[hsl(20,25%,25%)] mb-4">
                 코드 설명
               </h2>
               <div className="prose max-w-none text-[hsl(20,20%,30%)]">
@@ -293,19 +293,19 @@ const App = () => {
                     h1: ({ node, ...props }) => (
                       <h1
                         {...props}
-                        className="text-3xl font-bold text-[hsl(20,25%,20%)] mt-6 mb-6"
+                        className="text-2xl font-bold text-[hsl(20,25%,20%)] mt-6 mb-6"
                       />
                     ),
                     h2: ({ node, ...props }) => (
                       <h2
                         {...props}
-                        className="text-2xl font-semibold text-[hsl(20,30%,25%)] mt-6 mb-6"
+                        className="text-xl font-semibold text-[hsl(20,30%,25%)] mt-6 mb-6"
                       />
                     ),
                     h3: ({ node, ...props }) => (
                       <h3
                         {...props}
-                        className="text-xl font-medium text-[hsl(20,35%,30%)] mt-6 mb-6"
+                        className="text-lg font-medium text-[hsl(20,35%,30%)] mt-6 mb-6"
                       />
                     ),
                     p: ({ node, ...props }) => (
@@ -343,7 +343,7 @@ const App = () => {
               </div>
             </section>
             <section>
-              <h2 className="text-xl font-semibold text-[hsl(20,25%,25%)] mb-4">
+              <h2 className="text-2xl font-semibold text-[hsl(20,25%,25%)] mb-4">
                 시간복잡도
               </h2>
               <div className="prose max-w-none text-[hsl(20,20%,30%)]">
@@ -355,7 +355,7 @@ const App = () => {
 
         {!loading && related_problems.length > 0 && (
           <div className="mt-8 bg-white p-6 rounded-xl shadow-sm border border-[hsl(20,30%,90%)]">
-            <h2 className="text-xl font-semibold text-[hsl(20,25%,25%)] mb-4">
+            <h2 className="text-2xl font-semibold text-[hsl(20,25%,25%)] mb-4">
               {tagName} - 관련 문제
             </h2>
             <ul className="space-y-2">
