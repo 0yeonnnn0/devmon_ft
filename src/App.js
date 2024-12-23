@@ -57,10 +57,13 @@ const App = () => {
           headers: { "Content-Type": "application/json" },
         }
       );
+
       console.log(response.data);
+      const data = JSON.parse(response.data.data);
+
       setTagName(response.data.tag_name);
       setRelatedProblems(response.data.related_problem);
-      setExplanation(response.data.data);
+      setExplanation(data);
     } catch (err) {
       setError(
         err.response?.data?.detail || "오류가 발생했습니다. 다시 시도해주세요."
