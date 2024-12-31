@@ -20,6 +20,7 @@ const App = () => {
   return (
     <>
       <Helmet>
+        <link rel="icon" href="/path/to/favicon.ico" />
         {explanation ? (
           <>
             <title>
