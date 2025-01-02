@@ -10,10 +10,14 @@
 - **기존 문제점** : 코딩테스트 공부 시, 해설이 존재하지 않아 한 문제를 풀지 못하면 풀 때까지 붙잡고 있어야 함.
 - **해결하고자 한 부분** : 학습지의 해설지처럼, 문제를 풀기 위해선 어떻게 접근해야 하는지에 대해 알려주고 싶었음.
 
+## 팀 소개
+
+- **[김동연](https://github.com/0yeonnnn0)**: Full-Stack Developer
+- **[김민종](https://github.com/manjong-bot)**: Frontend Developer
+
 ## Demo 및 사용법
 
 [데모 영상 보기](https://www.youtube.com/watch?v=Jj12vxyym_8) <br>
-
 
 1. 유저는 백준 문제의 링크를 제출합니다.
 
@@ -29,8 +33,7 @@
    - 코드 설명
    - 시간 복잡도
    - 해당 알고리즘으로 풀 수 있는 다른 문제 5가지
-![Devmon_demo_2](https://github.com/user-attachments/assets/af0194d0-5d07-4634-beff-fe2f8f852646)
-
+     ![Devmon_demo_2](https://github.com/user-attachments/assets/af0194d0-5d07-4634-beff-fe2f8f852646)
 
 ## 설치 및 실행
 
